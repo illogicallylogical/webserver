@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta description="pwnPrime members are cockmonkeys">
+    <title>big juicy thicc tits</title>
+    <link rel="icon" href="https://pornhub.com/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+        body,
+        html {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(243, 243, 243);
+        }
+
+        #header {
+            width: 95%;
+            padding: 2.5%;
+            text-align: center;
+        }
+
+        #pwnPrime {
+            text-shadow: 0 0 5px rgb(170, 240, 240), 0 0 9px rgb(126, 202, 216), 0 0 12px #3a67e2, 0 0 17px #0b3ba3, 0 0 50px #e60073;
+        }
+
+        #blog-div {
+            width: 600px;
+            min-width: 30%;
+            max-width: 95%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .post {
+            height: 150px;
+        }
+
+        .test:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div id=blog-div>
+        <h1>How Pwned Your Wordpress Site!</h1>
+        <h4>Made by <span class="test">0xMagomed</span></h4>
+        <p>---------------- Sections ----------------</p>  
+        <ol>
+            <li>Introduction</li>
+            <li>Enumeration</li>
+            <ul>
+                <li>NMAP</li>
+                <li>Gobuster</li>
+                <li>Default Wordpress Credentials </li>
+                <li>Changing 404.php to php-reverse-shell.php </li>
+            </ul>
+            <li>Privilege escalation</li>
+            <ul>
+                <li>Weak permissions (W/R permissions on /etc/passwd)</li>
+                <li>Uploading our own /etc/passwd</li>
+            </ul>
+
+        </ol>
+
+        <p>---------------- Introduction ----------------</p>
+        Hey everyone it's beta male here! >:D Today i am bringing you a goonpwn exclusive writeup on Basic Pentesting:
+        1, this box really straight forward, excellent for beginners,
+        i also really loved the PE (Privilege Escalation) part as it's not something you commonly see,
+        although It's not very real-life PE attack vector so it doesn't really matter anyway. So before we start the box
+        ip was 192.168.0.10 and lets get right into this! B)
+        <p>---------------- Enumeration ----------------</p>
+        <p>We obviously start with the classic ol' Nmap scan, since we know the machine IP we just scan it.</p>
+        <code><pre>
+# Nmap 7.80 scan initiated Thu Mar 12 18:23:02 2020 as: nmap -sV -sC --webxml -oA nmap/output -v 192.168.0.10
+Nmap scan report for basic_pentesting.local (192.168.0.10)
+Host is up (0.00016s latency).
+Not shown: 997 closed ports 
+PORT   STATE SERVICE VERSION
+ 21/tcp open  ftp     ProFTPD 1.3.3c
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 d6:01:90:39:2d:8f:46:fb:03:86:73:b3:3c:54:7e:54 (RSA)
+|   256 f1:f3:c0:dd:ba:a4:85:f7:13:9a:da:3a:bb:4d:93:04 (ECDSA)
+|_  256 12:e2:98:d2:a3:e7:36:4f:be:6b:ce:36:6b:7e:0d:9e (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-methods:
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+MAC Address: 08:00:27:09:F7:A4 (Oracle VirtualBox virtual NIC)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar 12 18:23:10 2020 -- 1 IP address (1 host up) scanned in 8.18 seconds
+</pre></code>
+
+
+        <br>
+
+        <div id="header">
+            <h1 id=pwnPrime>pwnPrime</h1>
+            <marquee direction="right">A PRETTY BAD CTF TEAM</marquee>
+            <hr style="width: 50px;">
+            <a href="//wargame.pwnprime.com">Our Wargame</a>, <a href="https://ctftime.org/team/118793">pwnPrime -
+                CTFTime</a>
+            <br>
+            Members: <a href="//github.com/illogicallylogical">illogicallylogical - GH</a>, <a
+                href="//twitter.com/0xMagomed">0xMagomed - TW</a>,
+            <a href="//twitter.com/R1pk3n31337">R1pk3n - TW</a>, <a href="//jon.jon.network">JonPizza - TW</a>
+            <hr style="width: 50px;">
+        </div>
+</body>
+
+</html>
