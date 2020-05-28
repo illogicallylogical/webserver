@@ -19,17 +19,22 @@
         width: 95%;
         padding: 2.5%;
         position: fixed;
+        text-align: center;
       }
 
       #pwnPrime {
         text-shadow: 0 0 5px rgb(145, 223, 226), 0 0 10px rgb(121, 190, 202), 0 0 15px #3a67e2, 0 0 20px #0b3ba3, 0 0 50px #e60073;
-        float: left;
+      }
+
+      marquee {
+        scrollamount: 100px;
       }
     </style>
   </head>
   <body>
     <div id=header>
-      <center id=pwnPrime>pwnPrime</center> &sdot; <marquee>A PRETTY BAD CTF TEAM</marquee>
+      <h1 id=pwnPrime>pwnPrime</h1> 
+      <marquee direction="right" scrollamount="15">A PRETTY BAD CTF TEAM</marquee>
     </div>
   </body>
 </html>
